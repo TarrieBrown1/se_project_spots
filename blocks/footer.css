@@ -1,0 +1,19 @@
+.footer {
+  color: #212121;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  padding: 60px 60px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__copyright {
+  font-weight: 400;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  opacity: 70%;
+}
