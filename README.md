@@ -22,7 +22,7 @@ This project is made so all the elements are displayed correctly on popular scre
 
 **Deployment 
 
-- [Link to the project on GitHub](https://github.com/TarrieBrown1/se_project_spots
+- [Link to the project on GitHub](https://tarriebrown1.github.io/se_project_spots/
 )
 
 **Images**
