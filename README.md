@@ -6,6 +6,7 @@
 - Figma
 - Video (Loom)
 - Images
+- GitHub
 
 **Intro**
 
@@ -18,6 +19,11 @@ This project is made so all the elements are displayed correctly on popular scre
 **Link to video**
 
 - [Link to the project on loom](https://www.loom.com/share/6c7081e4059743cbbffe782db0fedebd?sid=01101454-dcd2-4f47-a637-7249af325d65)
+
+**Deployment 
+
+- [Link to the project on GitHub](https://github.com/TarrieBrown1/se_project_spots
+)
 
 **Images**
 
