@@ -10,14 +10,18 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Spots</title>
   </head>
-  <body>
-    <div class="page">
+  <body class="page">
+    <div class="page__content">
       <header class="header">
-        <img src="./images/logo.svg" alt="Spot logo" class="header__logo" />
+        <img class="header__logo" src="./images/logo.svg" alt="Spot logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img src="./images/avatar.svg" alt="Avatar" class="profile__avatar" />
+          <img
+            src="./images/avatar.svg"
+            alt="Bessie Coleman"
+            class="profile__avatar"
+          />
           <div class="profile__column">
             <h1 class="profile__name">
               Bessie Coleman, born as Elizabeth Coleman (January 26, 1892 –
@@ -29,12 +33,12 @@
               "Brave Bessie", and hoped to start a school for African-American
               fliers.
             </p>
-            <button type="button" class="profile__edit-btn">
+            <button class="profile__edit-btn" type="button">
               <img src="./images/pencil.svg" alt="Pencil icon" />Edit Profile
             </button>
           </div>
-          <button type="button" class="profile__add-btn">
-            <img src="./images/plus.svg" alt="Plus icon" />New Post
+          <button class="profile__new-post-btn" type="button">
+            <img src="./images/plus.svg" alt="Plus icon" /> New Post
           </button>
         </section>
         <section class="cards page__section">
