@@ -24,35 +24,51 @@ const profileDescriptionEl = document.querySelector(".profile__description");
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
-  editProfileModal.classList.add("modal_open");
-});
-
-editProfileCloseBtn.addEventListener("click", function () {
-  editProfileModal.classList.remove("modal_open");
+  editProfileModal.classList.add("modal_opened");
 });
 
 newPostBtn.addEventListener("click", function () {
-  newPostModal.classList.add("modal_open");
+  newPostLinkInput.value = addCardFormEl.textContent;
+  newPostNameInput.value = addCardFormEl.textContent;
+  newPostModal.classList.add("modal_opened");
+});
+
+editProfileCloseBtn.addEventListener("click", function () {
+  editProfileModal.classList.remove("modal_opened");
+});
+
+newPostBtn.addEventListener("click", function () {
+  newPostModal.classList.add("modal_opened");
 });
 
 newPostCloseBtn.addEventListener("click", function () {
-  newPostModal.classList.remove("modal_open");
+  newPostModal.classList.remove("modal_opened");
 });
+
+function closeModal() {
+  modal.classList.remove("modal_opened");
+}
+
+function openModal() {
+  modal.classList.add("modal_opened");
+}
+
 
 function handleEditProfileFormSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
-  editProfileModal.classList.remove("modal_open");
+  editProfileModal.classList.remove("modal_opened");
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileFormSubmit);
 
 function handleAddCardFormSubmit(evt) {
   evt.preventDefault();
-  cardName.textContent = nameInput.value;
+  profileName.textContent = editProfileNameInput.value;
   cardLink.textContent = linkInput.value;
-  newPostModal.classList.remove("modal_open");
+  newPostModal.classList.remove("modal_opened");
+  closeModal();
 }
 
 addCardFormEl.addEventListener("submit", handleAddCardFormSubmit);

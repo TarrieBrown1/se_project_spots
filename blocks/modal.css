@@ -11,9 +11,10 @@
   align-items: center;
   flex-direction: column;
   padding: 0 20px;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
 }
 
-.modal_open {
+.modal_opened {
   visibility: visible;
 }
 
@@ -24,6 +25,7 @@
   width: 100%;
   padding: 32px 50px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .modal__close-btn {
@@ -86,6 +88,11 @@
 .modal__input:hover {
   border-color: rgba(33, 33, 33, 1);
   cursor: pointer;
+}
+
+.modal__submit-btn:hover {
+  cursor: pointer;
+  opacity: 80%;
 }
 
 .modal__submit-btn {
