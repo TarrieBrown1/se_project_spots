@@ -88,7 +88,7 @@ cardLikeBtnEl.addEventListener("click", () => {
 
 const cardDeleteBtnEl = cardElement.querySelector(".card__delete-btn");
 cardDeleteBtnEl.addEventListener("click", () => {
-  cardDeleteBtnEl.closest(".card").remove();
+ cardElement.remove();
 });
 
 cardImageEl.addEventListener("click", () => {
