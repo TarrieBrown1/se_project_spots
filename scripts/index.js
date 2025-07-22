@@ -165,6 +165,10 @@ const inputValues = {
   cardsList.prepend(cardElement);
 
   closeModal(newPostModal);
+
+  captionInput.value = " ";
+  linkInput.value = " ";
+  
 }
 
 addCardFormEl.addEventListener("submit", handleAddCardFormSubmit);
