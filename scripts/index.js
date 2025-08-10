@@ -51,6 +51,8 @@ const editProfileDescriptionInput = editProfileModal.querySelector(
   "#profile-description-input"
 );
 
+const cardSubmitBtn = editProfileModal.querySelector(".modal__submit-btn");
+
 const addCardFormEl = document.querySelector("#add-card-form");
 const linkInput = addCardFormEl.querySelector("#card-image-input");
 const captionInput = addCardFormEl.querySelector("#caption-input");
@@ -164,11 +166,12 @@ const inputValues = {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
 
-  closeModal(newPostModal);
-
   captionInput.value = " ";
   linkInput.value = " ";
-  
+
+  disableButton(cardSubmitBtn, settings);
+
+  closeModal(newPostModal);
 }
 
 addCardFormEl.addEventListener("submit", handleAddCardFormSubmit);
