@@ -173,7 +173,7 @@ border: 1px solid #FF0000;
   color: #fcf5e5;
 }
 
-modal__submit-btn_disabled {
+.modal__submit-btn_disabled {
   background-color: #808080;
   cursor: not-allowed;
 }

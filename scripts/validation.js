@@ -15,7 +15,7 @@ inputElement.classList.add(config.inputErrorClass);
 };
 
 const hideInputError = (formElement, inputElement, config) => {
-   const errorMessageElement = formElement.querySelector(config.errorClass);
+   const errorMessageElement = formElement.querySelector(`.${config.errorClass}`);
    errorMessageElement.textContent = "";
    inputElement.classList.remove(config.inputErrorClass);
 };
@@ -71,7 +71,7 @@ toggleButtonState(inputList, buttonElement, config);
 const enableValidation = (config) => {
   const formList = (document.querySelectorAll(config.formSelector));
   formList.forEach((formElement) => {
-    setEventListeners(formElement);
+    setEventListeners(formElement, config);
   });
 };
 
