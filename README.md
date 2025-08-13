@@ -14,7 +14,7 @@ This project is made so all the elements are displayed correctly on popular scre
 
 **Figma**
 
-- [Link to the project on Figma](https://www.figma.com/design/p7amENvGmugKHfrOif5p1E/Sprint-5-Project-Spots---March-2025?node-id=51-221&t=zJ2bXNsXpOBzuU4R-0)
+- [Link to the project on Figma](https://www.figma.com/design/jFtXsDr4XOyebKcgjyXN6W/Sprint-6-Project--Spots?node-id=51-138&p=f&t=mbp9sLtMdZd2lXxM-0)
 
 **Link to video**
 

@@ -4,28 +4,28 @@ const settings = {
   submitButtonSelector: ".modal__submit-btn",
   inactiveButtonClass: "modal__submit-btn_disabled",
   inputErrorClass: "modal__input_type_error",
-  errorClass: "modal__error_visible",
+  errorClass: "modal__error",
 }
 
 
 const showInputError = (formElement, inputElement, errorMessage, config) => {
-  const errorMessageElement = formElement.querySelector(config.errorClass);
+  const errorMessageElement = formElement.querySelector(`#${inputElement.id}-error`);
   errorMessageElement.textContent = errorMessage;
 inputElement.classList.add(config.inputErrorClass);
 };
 
 const hideInputError = (formElement, inputElement, config) => {
-   const errorMessageElement = formElement.querySelector(`.${config.errorClass}`);
+  const errorMessageElement = formElement.querySelector(`#${inputElement.id}-error`);
    errorMessageElement.textContent = "";
    inputElement.classList.remove(config.inputErrorClass);
 };
 
 
-const checkInputValidity = (formElement, inputElement) => {
+const checkInputValidity = (formElement, inputElement, config) => {
 if (!inputElement.validity.valid) {
-  showInputError(formElement, inputElement, inputElement.validationMessage);
+  showInputError(formElement, inputElement, inputElement.validationMessage, config.inputErrorClass);
 } else {
-  hideInputError(formElement, inputElement);
+  hideInputError(formElement, inputElement, config.inputErrorClass);
 }
 };
 
@@ -58,7 +58,7 @@ const setEventListeners = (formElement, config) => {
 toggleButtonState(inputList, buttonElement, config);
 
 
-  inputList.forEach((inputElement) => {
+  inputList.forEach((inputElement, config) => {
     inputElement.addEventListener("input", function () {
       checkInputValidity(formElement, inputElement, config);
       toggleButtonState(inputList, buttonElement, config);
