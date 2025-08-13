@@ -133,9 +133,7 @@ previewCloseBtn.addEventListener("click", function () {
   closeModal(previewModal);
 });
 
-function openModal(modal) {
-  modal.classList.add("modal_opened");
-}
+
 
 function handleEditProfileFormSubmit(evt) {
   evt.preventDefault();
