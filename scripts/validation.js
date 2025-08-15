@@ -23,9 +23,9 @@ const hideInputError = (formElement, inputElement, config) => {
 
 const checkInputValidity = (formElement, inputElement, config) => {
 if (!inputElement.validity.valid) {
-  showInputError(formElement, inputElement, inputElement.validationMessage, config.inputErrorClass);
+  showInputError(formElement, inputElement, inputElement.validationMessage, config);
 } else {
-  hideInputError(formElement, inputElement, config.inputErrorClass);
+  hideInputError(formElement, inputElement, config);
 }
 };
 
