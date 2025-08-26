@@ -29,6 +29,15 @@ if (!inputElement.validity.valid) {
 }
 };
 
+function resetValidation(formElement, config) {
+  const inputs = formElement.querySelectorAll(config.inputSelector);
+  inputs.forEach(input => {
+    hideInputError(formElement, input, config);
+  });
+}
+
+
+
 const hasInvalidInput = (inputList) => {
   return inputList.some((input) => {
     return !input.validity.valid;
@@ -37,8 +46,7 @@ const hasInvalidInput = (inputList) => {
 
 const toggleButtonState = (inputList, buttonElement, config) => {
   if (hasInvalidInput(inputList)) {
-    buttonElement.classList.add(config.inactiveButtonClass);
-    buttonElement.disabled = true;
+    disableButton(buttonElement, config) 
   } else {
     buttonElement.classList.remove(config.inactiveButtonClass);
     buttonElement.disabled = false;
